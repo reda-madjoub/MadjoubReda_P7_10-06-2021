@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lato,system-ui,"Helvetica Neue",Arial,sans-serif;
+}
+
+@import "_header.scss";
+@import "_mainSearchBar.scss";
+@import "_dropdown.scss";
+@import "_filterTag.scss";
+@import "_error.scss";
+@import "_cardRecipe.scss";

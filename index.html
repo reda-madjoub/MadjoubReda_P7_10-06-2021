@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/style/css/style.css">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" crossorigin="anonymous">
+    <!-- ICON LOGO -->
+    <link rel="icon" href="./src/img/hat.svg">
+    <title>Les petits plats</title>
+  </head>
+  <body>
+      <!-- LOGO -->
+      <header>
+          <img src="./src/img/logo.svg" alt="Logo les petits plats">
+      </header>
+      <main>
+        <!-- NO ELEMENT FOUND -->
+        <div id="error"></div>
+
+        <!-- MAIN FILTER -->
+        <form id="main-search-section">
+          <input id="main-search-input" type="search" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette" aria-label="Search">
+          <i tabindex="0" class="fas fa-search h4" role="button"></i>
+        </form>
+
+        <!-- FILTER TAGS SELECTED -->
+        <div id="filterTag">
+           <!-- <div class="ust-tag">
+              <p>presse citron</p>
+              <img class="removeTag" src="./src/img/close.svg" alt="close button">
+            </div> -->
+          <!-- <div class="ust-tag">
+              <p>presse citron</p>
+              <img class="removeTag" src="./src/img/close.svg" alt="close button">
+            </div>
+            <div class="ust-tag">
+              <p>moule à gateaux</p>
+              <img class="removeTag" src="./src/img/close.svg" alt="close button">
+            </div>
+            <div class="app-tag">
+              <p>Poële à crêpe</p>
+              <img class="removeTag" src="./src/img/close.svg" alt="close button">
+            </div>
+            <div class="app-tag">
+              <p>Sauteuse</p>
+              <img class="removeTag" src="./src/img/close.svg" alt="close button">
+            </div> -->
+        </div>
+
+        <!-- ADVANCED FILTER -->
+        <div id="advanced-filter">
+          <div class="dropdown ing">
+            <button class="bloc-top">
+              <input type="text" placeholder="ingredient" id="ing-input">
+              <img src="./src/img/arrow.svg" class="close" alt="arrow">
+            </button>
+            <div class="bloc-links">
+              <ul  id=ing-list>
+                <li>coco</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown app">
+            <button class="bloc-top">
+              <input type="text" placeholder="Appareil" id="app-input">
+              <img src="./src/img/arrow.svg" class="close" alt="arrow">
+            </button>
+            <div class="bloc-links">
+              <ul  id=app-list>
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown ust">
+            <button class="bloc-top">
+              <input type="text" placeholder="Ustensiles" id="ust-input">
+              <img src="./src/img/arrow.svg" class="close" alt="arrow">
+            </button>
+            <div class="bloc-links">
+              <ul  id=ust-list>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- RESULT SEARCH -->
+      <div id="result">
+        <!-- <div class="recipe">
+            <div class="img-recipe"></div>
+            <div class="info-recipe">
+              <div class="top">
+                <p>Limonade de Coco</p>
+                <p><img src="/src/img/time.svg" alt="logo time"><strong> 10 min</strong></p>
+              </div>
+              <div class="bottom">
+                <p id="ing-list"><strong>Lait de coco</strong>: 400ml <br> <strong>Jus de citron</strong>: 2 <br> <strong>Crème de coco</strong>: 2cuillères à soupe <br> <strong>Sucre</strong>: 30grammes <br> <strong>Glaçons</strong>: undefined <br></p>
+                <p>Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée</p>
+              </div>
+            </div>
+          </div> -->
+      </div>
+
+
+    <script async type="module" defer src="./src/js/script.js"></script>
+    </body>
+</html>

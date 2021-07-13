@@ -1,0 +1,24 @@
+{
+  "name": "MadjoubReda_P7_10-06-2021(v2)",
+  "version": "1.0.0",
+  "description": "Les petits plats : Développez un algorithme de recherche en JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reda-madjoub/MadjoubReda_P7_10-06-2021.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reda-madjoub/MadjoubReda_P7_10-06-2021/issues"
+  },
+  "homepage": "https://github.com/reda-madjoub/MadjoubReda_P7_10-06-2021#readme",
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "prettier": "^2.3.1"
+  }
+}

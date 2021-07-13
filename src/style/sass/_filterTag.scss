@@ -1,0 +1,33 @@
+#filterTag {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    .ing-tag, .app-tag, .ust-tag {
+        font-size: 14px;
+        margin: 0px 10px;
+        color: #fff;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        width: 140px;
+        height: 40px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        img {
+            cursor: pointer;
+        }
+}
+    .ing-tag{
+        background-color:#3282F7;
+    }
+    .app-tag {
+        background-color: #68D9A4;
+    }
+    .ust-tag {
+        background-color: #ED6454;
+    }
+}
