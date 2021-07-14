@@ -7,7 +7,25 @@ const cardSection = document.getElementById('result')
 const labelZone = document.getElementById('filterTag')
 const error = document.getElementById('error')
 const dropdownList = document.getElementById('advanced-filter')
-const arrowLabel = document.getElementsByClassName('removeTag')
+const listDropdownFilterElement = document.getElementsByClassName('list')
+// const arrowLabel = document.getElementsByClassName('removeTag')
+const ingInput = document.getElementById('ing-input')
+const appInput = document.getElementById('app-input')
+const ustInput = document.getElementById('ust-input')
+
+const filterDropdownElementByinput = (e) => {
+    const list = [...listDropdownFilterElement]
+    list.map(liste => {
+        const listTemp = [...liste.children]
+        listTemp.forEach(elt => {
+            if(elt.textContent.toLowerCase().indexOf(e.target.value.toLowerCase()) === -1) {
+                elt.style.display = 'none'
+            }else {
+                elt.style.display = 'block'
+            }
+        })
+    })
+}
 
 const createDomElement = (element, className = null, idName = null) => {
     let elt = document.createElement(`${element}`)
@@ -123,7 +141,7 @@ const updateCardRecipe = (arrayOfId) => {
         <div class="info-recipe">
           <div class="top">
             <p>${recipes[[item]-1].name}</p>
-            <p><img src="/src/img/time.svg" alt="logo time"><strong> ${recipes[[item]-1].time} min</strong></p>
+            <p><img src="./src/img/time.svg" alt="logo time"><strong> ${recipes[[item]-1].time} min</strong></p>
           </div>
           <div class="bottom">
             <p id="ing-list">${recipes[[item]-1].ingredients.map(elt =>`<strong>${elt.ingredient}</strong> : ${elt.quantity ? elt.quantity : ''} ${elt.unit ? elt.unit : ''} <br>`).join(' ')}</p>
@@ -199,6 +217,10 @@ const showNoIdFound = (arrayOfId) => {
     }
 }
 
+
+ingInput.addEventListener('input', filterDropdownElementByinput)
+appInput.addEventListener('input', filterDropdownElementByinput)
+ustInput.addEventListener('input', filterDropdownElementByinput)
 
 export {addLabel,
         removeLabel,

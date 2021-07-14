@@ -39,7 +39,9 @@ export const main = () => {
             console.log('filter by label : ' +result)
         }
         console.log('final result : ' +result)
-     
+        for (const elt of result) {
+            elt.ingredients
+        }
         view.updateIngredientDropdownList(result)
         view.updateApplianceDropdownList(result)
         view.updateUstensilsDropdownList(result)
