@@ -4,10 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- CSS -->
     <link rel="stylesheet" href="./src/style/css/style.css">
-
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" crossorigin="anonymous">
     <!-- ICON LOGO -->
@@ -30,54 +28,33 @@
         </form>
 
         <!-- FILTER TAGS SELECTED -->
-        <div id="filterTag">
-           <!-- <div class="ust-tag">
-              <p>presse citron</p>
-              <img class="removeTag" src="./src/img/close.svg" alt="close button">
-            </div> -->
-          <!-- <div class="ust-tag">
-              <p>presse citron</p>
-              <img class="removeTag" src="./src/img/close.svg" alt="close button">
-            </div>
-            <div class="ust-tag">
-              <p>moule à gateaux</p>
-              <img class="removeTag" src="./src/img/close.svg" alt="close button">
-            </div>
-            <div class="app-tag">
-              <p>Poële à crêpe</p>
-              <img class="removeTag" src="./src/img/close.svg" alt="close button">
-            </div>
-            <div class="app-tag">
-              <p>Sauteuse</p>
-              <img class="removeTag" src="./src/img/close.svg" alt="close button">
-            </div> -->
-        </div>
+        <div id="filterTag"></div>
 
         <!-- ADVANCED FILTER -->
         <div id="advanced-filter">
           <div class="dropdown ing">
-            <button class="bloc-top">
+            <div class="bloc-top">
               <input type="text" placeholder="ingredient" id="ing-input">
               <img src="./src/img/arrow.svg" class="close" alt="arrow">
-            </button>
+            </div>
             <div class="bloc-links">
               <ul class='list' id=ing-list></ul>
             </div>
           </div>
           <div class="dropdown app">
-            <button class="bloc-top">
+            <div class="bloc-top">
               <input type="text" placeholder="Appareil" id="app-input">
               <img src="./src/img/arrow.svg" class="close" alt="arrow">
-            </button>
+            </div>
             <div class="bloc-links">
               <ul class='list' id=app-list></ul>
             </div>
           </div>
           <div class="dropdown ust">
-            <button class="bloc-top">
+            <div class="bloc-top">
               <input type="text" placeholder="Ustensiles" id="ust-input">
               <img src="./src/img/arrow.svg" class="close" alt="arrow">
-            </button>
+            </div>
             <div class="bloc-links">
               <ul class='list' id=ust-list></ul>
             </div>
@@ -89,6 +66,6 @@
       <div id="result"></div>
 
 
-    <script async type="module" defer src="./src/js/script.js"></script>
+    <script type="module" src="./src/js/script.js"></script>
     </body>
 </html>

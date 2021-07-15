@@ -129,7 +129,7 @@ const filterByLabel = (array) => {
         if(allLabel.every(elt => ing.includes(elt.toLowerCase())) || allLabel.every(elt => ust.includes(elt.toLowerCase())) || allLabel.includes(app)){
             console.log(recipes[item])
             result.push(recipes[item].id)
-          }
+        }
     }
     return [...new Set(result)]
 }
@@ -170,36 +170,36 @@ const showAllCardRecipe = () => {
 }
 const addLabel = () => {
     dropdownList.addEventListener('click', (e) => {
-      if(e.target.nodeName === 'LI') {
-          if(!getAllLabelTextSelected().includes(e.target.textContent.trim().toLowerCase())){ 
+        if(e.target.nodeName === 'LI') {
+            if(!getAllLabelTextSelected().includes(e.target.textContent.trim().toLowerCase())){ 
             //   console.log('un label est cree')
             //   console.log(e.target.parentNode.getAttribute('id'))
-              switch (e.target.parentNode.getAttribute('id')) {
-              case 'app-list':
-                  labelZone.innerHTML += `<div class="app-tag">
+                switch (e.target.parentNode.getAttribute('id')) {
+                case 'app-list':
+                    labelZone.innerHTML += `<div class="app-tag">
                                       <p>${e.target.textContent}</p>
                                       <img class="removeTag"  src="./src/img/close.svg" alt="close button">
                                     </div>`
-                  break
-              case 'ust-list':
-                  labelZone.innerHTML += `<div class="ust-tag">
+                    break
+                case 'ust-list':
+                    labelZone.innerHTML += `<div class="ust-tag">
                                       <p>${e.target.textContent}</p>
                                       <img class="removeTag" src="./src/img/close.svg" alt="close button">
                                     </div>`
-                  break
-              case 'ing-list':
-                  labelZone.innerHTML += `<div class="ing-tag">
+                    break
+                case 'ing-list':
+                    labelZone.innerHTML += `<div class="ing-tag">
                                       <p>${e.target.textContent}</p>
                                       <img class="removeTag" src="./src/img/close.svg" alt="close button">
                                     </div>`
-                  break
-              }
+                    break
+                }
             // ADDING EVENT WHEN ELEMENT IS CREATED
             // for (const elt of arrowLabel) {
             //     console.log(elt);
             //     elt.addEventListener('click', )
             // }
-          }
+            }
         }
     })
 }
@@ -212,8 +212,16 @@ const removeLabel = () => {
 }
 const showNoIdFound = (arrayOfId) => {
     if(arrayOfId.length === 0) {
-        error.innerHTML = `<p style="background-color: #fed8b2">Aucune recette ne correspond à votre recherche... Vous pouvez chercher "tarte aux pommes", "poisson", etc.
+        error.style.backgroundColor = '#fed8b2'
+        error.style.borderRadius = '10px'
+        error.style.padding = '20px'
+        error.innerHTML = `<p>Aucune recette ne correspond à votre recherche... Vous pouvez chercher "tarte aux pommes", "poisson", etc.
     </p>`
+    }else {
+        error.style.backgroundColor = ''
+        error.style.borderRadius = ''
+        error.style.padding = ''
+        error.innerHTML = ''
     }
 }
 
@@ -223,14 +231,14 @@ appInput.addEventListener('input', filterDropdownElementByinput)
 ustInput.addEventListener('input', filterDropdownElementByinput)
 
 export {addLabel,
-        removeLabel,
-        showAllFilterInDropdownList,
-        showAllCardRecipe,
-        filterByLabel, 
-        showNoIdFound, 
-        updateIngredientDropdownList ,
-        updateApplianceDropdownList ,
-        updateUstensilsDropdownList ,
-        createDomElement, 
-        updateCardRecipe
+    removeLabel,
+    showAllFilterInDropdownList,
+    showAllCardRecipe,
+    filterByLabel, 
+    showNoIdFound, 
+    updateIngredientDropdownList ,
+    updateApplianceDropdownList ,
+    updateUstensilsDropdownList ,
+    createDomElement, 
+    updateCardRecipe
 } 
