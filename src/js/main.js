@@ -7,6 +7,7 @@ const input = document.getElementById('main-search-input')
 
 export const main = () => {
     const chronoStart =  Date.now()
+
     let result = []
     for (const elt in recipes) {
         result.push(recipes[elt].id)
