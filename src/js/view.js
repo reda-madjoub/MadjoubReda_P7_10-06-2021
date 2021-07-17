@@ -134,6 +134,7 @@ const filterByLabel = (array) => {
     return [...new Set(result)]
 }
 const updateCardRecipe = (arrayOfId) => {
+    let absolutePath = 'https://reda-madjoub.github.io/MadjoubReda_P7_10-06-2021/src/img/time.svg'
     cardSection.innerHTML = ''
     for (const item of arrayOfId) {
         cardSection.innerHTML += `<div class="recipe">
@@ -141,7 +142,7 @@ const updateCardRecipe = (arrayOfId) => {
         <div class="info-recipe">
           <div class="top">
             <p>${recipes[[item]-1].name}</p>
-            <p><img src="./src/img/time.svg" alt="logo time"><strong> ${recipes[[item]-1].time} min</strong></p>
+            <p><img src="${absolutePath}" alt="logo time"><strong> ${recipes[[item]-1].time} min</strong></p>
           </div>
           <div class="bottom">
             <p id="ing-list">${recipes[[item]-1].ingredients.map(elt =>`<strong>${elt.ingredient}</strong> : ${elt.quantity ? elt.quantity : ''} ${elt.unit ? elt.unit : ''} <br>`).join(' ')}</p>
@@ -152,13 +153,14 @@ const updateCardRecipe = (arrayOfId) => {
     }
 }
 const showAllCardRecipe = () => {
+    let absolutePath = 'https://reda-madjoub.github.io/MadjoubReda_P7_10-06-2021/src/img/time.svg'
     for (const item of recipes) {
         cardSection.innerHTML += `<div class="recipe">
       <div class="img-recipe"></div>
       <div class="info-recipe">
         <div class="top">
           <p>${item.name}</p>
-          <p><img src="/src/img/time.svg" alt="logo time"><strong> ${item.time} min</strong></p>
+          <p><img src="${absolutePath}" alt="logo time"><strong> ${item.time} min</strong></p>
         </div>
         <div class="bottom">
           <p id="ing-list">${item.ingredients.map(elt =>`<strong>${elt.ingredient}</strong> : ${elt.quantity ? elt.quantity : ''} ${elt.unit ? elt.unit : ''} <br>`).join(' ')}</p>
