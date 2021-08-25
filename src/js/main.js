@@ -1,5 +1,5 @@
 import * as setting from './settingMethod.js'
-import { filterByInput } from './searchAlgo2.js'
+import { filterByInput } from './searchAlgo1.js'
 import { recipes } from './data.js'
 import * as view from './view.js'
 
