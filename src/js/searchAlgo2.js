@@ -6,9 +6,13 @@ export const filterByInput = (userInput = '') => {
         if(recipes[i].description.indexOf(userInput) > -1) {
             result.push(recipes[i].id)
         }
+    }
+    for (let i = 0; i < recipes.length; i++) {
         if(recipes[i].name.indexOf(userInput) > -1) {
             result.push(recipes[i].id)
         }
+    }
+    for (let i = 0; i < recipes.length; i++) {
         recipes[i].ingredients.forEach(elt => {   
             if(elt.ingredient.indexOf(userInput) > -1) result.push(recipes[i].id)
         })
