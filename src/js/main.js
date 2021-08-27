@@ -12,8 +12,8 @@ export const main = () => {
         result.push(recipes[elt].id)
     }
     const search = (userInput) => {
-        if(setting.isInputUpToTwoCharacters(userInput)) {
-            result = [...filterByInput(userInput)]
+        if(setting.isInputUpToTwoCharacters(userInput.toLowerCase())) {
+            result = [...filterByInput(userInput.toLowerCase())]
         }
         if(setting.isLabelSelected()) {
             result = [...view.filterByLabel(result)]
